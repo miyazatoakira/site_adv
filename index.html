@@ -13,8 +13,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar" >
+
+
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg sticky-lg-top justify-content-center text-center" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg sticky-lg-top " data-bs-theme="dark">
       <div class="container">
 
         <img class="img navbar-brand d-none d-lg-block" src="./assets/images/logo_adv.png" alt="" style="width: 25%" />
@@ -27,7 +29,7 @@
         <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse mt-2 text-center" id="navbarSupportedContent">
           <ul class="navbar-nav nav-underline nav-fill mx-auto" >
             <li class="nav-item">
               <a class="nav-link " aria-current="page" href="#inicio">início</a>
@@ -48,11 +50,12 @@
             </li>
           </ul>
 
-          <div class="social-icons mt-2" style="font-size: 30px;">
-            <a href=""><i class="bi bi-whatsapp"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
+          <div class="social-icons mt-lg-0 mt-xl-0 mt-xxl-0 mt-md-2 mt-4 " style="font-size: 30px;">
+            <a class="me-lg-4 me-md-0" href=""><i class="bi bi-whatsapp"></i></a>
+            <a class="me-lg-4 me-md-0" href=""><i class="bi bi-instagram"></i></a>
+            <a class="me-lg-4 me-md-0" href=""><i class="bi bi-facebook"></i></a>
           </div>
+          
         </div>
       </div>
     </nav>  
@@ -93,7 +96,7 @@
         </div>
 
         <div class="col-lg-5" data-aos="fade-down" data-aos-delay="150">
-          <h3 class="mt-sm-4" style="white-space: nowrap">Dra. Ivone Pereira de Sousa</h1>
+          <h3 class="mt-4 mt-sm-4 mt-md-4 mt-lg-0 mt-xl-0 mt-xxl-0" style="white-space: nowrap">Dra. Ivone Pereira de Sousa</h1>
             <p>
               OAB/SP nº 437.365<br><br>
             </p>
@@ -248,16 +251,9 @@
     </div>
   </section>
 
-  <!-- Botão do WhatsApp -->
-
-  <div class="whatsapp text-center mb-4">
-    <a href="https://wa.me/11950728490" target="_blank" class="btn btn-lg btn-success">
-      <i class="bi bi-whatsapp"></i>
-    </a>
-  </div>
-
-
-
+  
+  
+  
   <!-- FOOTER -->
   
   <footer>
@@ -292,7 +288,7 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="450">
+          <div id="footer" class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="450">
             <a href=""></a>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis repellat tempore! Animi, a. Non tempore dolorum blanditiis deserunt </p>
             <div class="social-icons" style="font-size: 30px;">
@@ -316,6 +312,14 @@
       </div>
     </div>
   </footer>
+
+    <!-- Botão do WhatsApp -->
+    
+    <div class="whatsapp text-center mb-4">
+      <a href="https://wa.me/11950728490" target="_blank" class="btn btn-lg btn-success">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
