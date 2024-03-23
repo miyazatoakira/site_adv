@@ -1,9 +1,9 @@
 /* Variáveis */
-:root{
-  --60_color: #F6F6F6;
+:root {
+  --60_color: #f6f6f6;
   --30_color: #171717;
-  --10_color: #FDE4C3;
-  --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+  --10_color: #fde4c3;
+  --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08);
   --transition: all 0.5s ease;
 }
 
@@ -12,7 +12,7 @@
   src: url(../fonts/Gotham-font-family/Gotham/Gotham-Book.otf);
 }
 
-@font-face{
+@font-face {
   font-family: gotham-light;
   src: url(../fonts/Gotham-font-family/Gotham/Gotham-Light.otf);
 }
@@ -29,28 +29,33 @@ a {
   text-decoration: none;
 }
 
-h1, .h1{
+h1,
+.h1 {
   font-family: gotham-medium;
-  color: var(--30_color);
 }
 
-h2, h3, h4, h5, .h2, .h3, .h4, .h5{
+h2,
+h3,
+h4,
+h5,
+.h2,
+.h3,
+.h4,
+.h5 {
   font-family: gotham;
   font-weight: 500;
-  color: var(--30_color);
 }
 
-.p, p{
+.p,
+p {
   font-family: gotham;
   font-weight: 500;
   color: silver;
 }
 
-.theme-shadow{
+.theme-shadow {
   box-shadow: var(--box-shadow);
 }
-
-
 
 /* Navbar */
 .navbar {
@@ -60,56 +65,70 @@ h2, h3, h4, h5, .h2, .h3, .h4, .h5{
   box-shadow: var(--box-shadow);
 }
 
-.navbar img{
+.navbar img {
   margin-top: -1%;
   margin-bottom: -1%;
   margin-left: -4%;
 }
 
-.navbar .nav-link{
+.navbar .nav-link {
   font-weight: 500;
-  color: var(--60_color);  
   text-transform: uppercase;
 }
 
-.navbar .nav-link:active {
+.nav-link:active {
   color: var(--10_color);
 }
 
-.navbar .nav-item :hover{
+.nav-item:hover {
   color: var(--10_color);
 }
 
-.contato h2{
+.contato h2 {
   font-family: gotham-medium;
   color: var(--30_color);
 }
 
-.navbar .bi{
+.navbar .bi {
   color: var(--30_color);
-  margin-right: 20px;  
 }
 
-.navbar .social-icons a{
+.navbar .social-icon {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .social-icon a {
   width: 52px;
   height: 52px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
   background-color: var(--60_color);
-  padding-left: 20px;
+  padding: 0;
+  position: relative;
 }
 
+.navbar .social-icon a .bi {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
 
-.navbar .social-icons a:hover{
+@media (max-width: 991.98px) {
+  .navbar .social-icon a {
+    width: 30px; /* Ajuste o tamanho do ícone para dispositivos menores */
+    height: 30px;
+  }
+}
+
+.navbar .social-icon a:hover {
+  background-color: var(--10_color);
   transition: var(--transition);
-  transform: scale(1.1);  
-
 }
-
-
-
 
 /* HERO SECTION */
 .hero {
@@ -120,59 +139,64 @@ h2, h3, h4, h5, .h2, .h3, .h4, .h5{
   padding: 100px 0;
 }
 
-.hero h1{
+.hero h1,
+.h5 {
   z-index: 2;
-  font-family: gotham-light;
+  font-family: gotham-bold;
   color: var(--60_color);
 }
 
-.hero{
-  background: linear-gradient(#171717e9,#1717178a,#1717172f), url(../images/hero-header.jpg);
+.hero {
+  background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)),
+    url(../images/hero-header.jpg);
   background-position: center;
   background-size: cover;
-
-
 }
 
+.hero .btn {
+  color: var(--60_color);
+}
 
+.hero .btn:hover {
+  color: var(--30_color);
+}
 
 /* SECTION  */
 
-section{
+section {
   padding-top: 140px;
   padding-bottom: 140px;
 }
 
-.section-title{
+.section-title {
   margin-bottom: 40px;
 }
 
-.section-title .line{
+.section-title .line {
   width: 60px;
   height: 4px;
   background-color: var(--30_color);
   margin: 16px auto 24px auto;
 }
 
-.section-title p{
+.section-title p {
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.abot_us{
+.abot_us {
   text-align: justify;
 }
 
-
 /* Serviços */
-.service{
+.service {
   position: relative;
   overflow: hidden;
   z-index: 2;
 }
 
-.service::after{
+.service::after {
   content: "";
   width: 0px; /* Valor original: 40px */
   height: 0px; /* Valor original: 40px */
@@ -183,7 +207,7 @@ section{
   transition: var(--transition);
 }
 
-.service:hover::after{
+.service:hover::after {
   width: 100%;
   height: 100%;
   background-color: var(--30_color);
@@ -191,25 +215,23 @@ section{
 }
 
 .service:hover h5,
-.service:hover p{
+.service:hover p {
   color: var(--10_color);
   transition: 0.6s;
 }
 
-.service:hover .iconbox{
+.service:hover .iconbox {
   color: var(--10_color);
   transition: 0.6s;
 }
-
-
 
 /* CONTATO */
 
-#contato{
+#contato {
   background-color: var(--30_color);
 }
 
-#contato::after{
+#contato::after {
   content: "";
   width: 100%;
   height: 70%;
@@ -220,155 +242,171 @@ section{
 }
 
 #contato h1,
-#contato p{
+#contato p {
   color: var(--10_color);
 }
 
-#contato .line{
+#contato .line {
   width: 60px;
   height: 4px;
   background-color: var(--10_color);
   margin: 16px auto 24px auto;
 }
 
-#contato{
+#contato {
   position: relative;
   z-index: 2;
 }
 
 #contato input,
-#contato textarea{
+#contato textarea {
   background-color: var(--30_color);
 }
 
-#contato p{
+#contato p {
   font-family: gotham-light;
   color: var(--60_color);
-} 
+}
 
 /* #contato .form-control{
   border-radius: 0;
 } */
 
-#contato .form-control:focus{
+#contato .form-control:focus {
   border-color: var(--10_color);
 }
 
-#contato .btn{
+#contato .btn {
   background-color: var(--30_color);
   border-color: var(--60_color);
   color: var(--60_color);
 }
 
-#contato .btn:hover{
+#contato .btn:hover {
   color: var(--30_color);
   background-color: var(--10_color);
 }
 
-#contato:placeholder-shown{
+#contato:placeholder-shown {
   color: var(--60_color);
 }
 
-
 /* FOOTER */
-footer a{
+footer a {
   color: var(--30_color);
 }
 
-
-footer ul{
+footer ul,
+.service ul {
   list-style: none;
   padding: 0;
 }
 
-footer .line{
+footer .line {
   width: 40px;
   height: 4px;
   background-color: var(--30_color);
-  margin-top: 12px ;
-  margin-bottom: 24px ;
+  margin-top: 12px;
+  margin-bottom: 24px;
 }
 
-footer h5{
+footer h5 {
   font-family: gotham-bold;
 }
 
-footer{
+footer {
   padding-top: 100px;
 }
 
-.footer-top #img{
+footer a:hover,
+ul p:hover {
+  color: var(--10_color);
+  transition: var(--transition);
+}
+
+.footer-top #img {
   margin-top: -3.4%;
 }
 
-.footer-top .img{
+.footer-top .img {
   position: relative;
   bottom: -10%;
 }
 
-.footer-top #nome{
+.footer-top #nome {
   font-family: gotham;
 }
 
-.footer-top{
+.footer-top {
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-bottom{
+.footer-bottom {
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-#footer .social-icons .bi{
-  color: var(--60_color);
+#footer .social-icons {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#footer .social-icons a{
-  width: 50px;
-  height: 50px;
-  display: inline-flex;
+#footer .social-icons .bi {
+  position: absolute; /* Adiciona posição absoluta para o ícone */
+  top: 50%; /* Move o ícone para o centro verticalmente */
+  left: 50%; /* Move o ícone para o centro horizontalmente */
+  transform: translate(-50%, -50%); /* Centraliza o ícone completamente */
+  font-size: 20px; /* Defina o tamanho do ícone conforme necessário */
+}
+
+#footer .social-icons a {
+  width: 42px;
+  height: 42px;
+  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
   border: 2px solid var(--30_color);
-  background-color: var(--30_color);
+  padding: 0; /* Remova o padding, pois usaremos padding para ajustar o ícone */
+  position: relative; /* Adiciona posição relativa */
 }
 
-#footer .social-icons .bi:hover{
-  color: var(--10_color);
+#footer .social-icons a:hover {
   transition: var(--transition);
+  border: 2px solid var(--10_color);
 }
 
-footer a:hover, ul p:hover{
-  color: var(--10_color);
+#footer .social-icons a:hover .bi {
   transition: var(--transition);
+  color: var(--10_color);
 }
-
-
-
 
 /* Botão Flutuante Whatsapp */
 
-.whatsapp a{
+.whatsapp a {
   position: fixed;
-  bottom: 60px;
-  right: 30px;
-  font-size: 30px;
+  bottom: 5vh;
+  right: 5vw;
+  font-size: 3vw;
   background-color: #01e675;
   color: #ffffff;
   border-radius: 50%;
-  padding: 3px;
-  width: 75px;
-  height: 75px;
   text-align: center;
   text-decoration: none;
   z-index: 100;
   box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; /* Adicione um tamanho fixo */
+  height: 80px; /* Adicione um tamanho fixo */
 }
 
-.whatsapp i{
+.whatsapp i {
   font-size: 40px;
+  margin: auto; /* Centraliza o ícone */
 }
 
 .whatsapp a:hover {
