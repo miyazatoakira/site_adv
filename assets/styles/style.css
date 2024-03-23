@@ -57,6 +57,19 @@ p {
   box-shadow: var(--box-shadow);
 }
 
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* Navbar */
 .navbar {
   font-family: gotham-light;
@@ -65,7 +78,7 @@ p {
   box-shadow: var(--box-shadow);
 }
 
-.navbar img {
+.navbar #logo-lg {
   margin-top: -1%;
   margin-bottom: -1%;
   margin-left: -4%;
@@ -96,6 +109,7 @@ p {
 .navbar .social-icon {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .navbar .social-icon a {
@@ -116,13 +130,6 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 30px;
-}
-
-@media (max-width: 991.98px) {
-  .navbar .social-icon a {
-    width: 30px; /* Ajuste o tamanho do ícone para dispositivos menores */
-    height: 30px;
-  }
 }
 
 .navbar .social-icon a:hover {
@@ -387,28 +394,25 @@ ul p:hover {
 
 .whatsapp a {
   position: fixed;
-  bottom: 5vh;
-  right: 5vw;
-  font-size: 3vw;
-  background-color: #01e675;
-  color: #ffffff;
-  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  bottom: 60px;
+  right: 60px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
   text-align: center;
-  text-decoration: none;
-  z-index: 100;
-  box-shadow: var(--box-shadow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px; /* Adicione um tamanho fixo */
-  height: 80px; /* Adicione um tamanho fixo */
-}
-
-.whatsapp i {
   font-size: 40px;
-  margin: auto; /* Centraliza o ícone */
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .whatsapp a:hover {
   background-color: #128c7e;
+  box-shadow: var(--box-shadow);
+  transform: scale(1.1);
 }
