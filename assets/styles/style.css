@@ -68,6 +68,7 @@ p {
 body {
   width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 /* Navbar */
@@ -103,7 +104,7 @@ body {
 }
 
 .navbar .bi {
-  color: var(--30_color);
+  color: #585858;
 }
 
 .navbar .social-icon {
@@ -113,13 +114,12 @@ body {
 }
 
 .navbar .social-icon a {
-  width: 52px;
-  height: 52px;
+  width: 7vh;
+  height: 7vh;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  background-color: var(--60_color);
   padding: 0;
   position: relative;
 }
@@ -129,12 +129,16 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 30px;
+  font-size: 4vh;
 }
 
 .navbar .social-icon a:hover {
-  background-color: var(--10_color);
-  transition: var(--transition);
+  transition: transform 1s ;
+  border: 3px solid var(--10_color);
+  transform: scale(1.1);
+  i{
+    color: var(--10_color);
+  }
 }
 
 /* HERO SECTION */
@@ -168,6 +172,12 @@ body {
   color: var(--30_color);
 }
 
+#inicio .subtitle{
+  font-family: gotham-light;
+  color: var(--60_color);
+  font-size: 2.2vh;
+}
+
 /* SECTION  */
 
 section {
@@ -192,7 +202,7 @@ section {
   margin-right: auto;
 }
 
-.abot_us {
+.about_us {
   text-align: justify;
 }
 
@@ -221,15 +231,10 @@ section {
   z-index: -1;
 }
 
-.service:hover h5,
-.service:hover p {
+.service:hover,
+.service:hover i{
+  transform: var(--transition);
   color: var(--10_color);
-  transition: 0.6s;
-}
-
-.service:hover .iconbox {
-  color: var(--10_color);
-  transition: 0.6s;
 }
 
 /* CONTATO */
@@ -394,21 +399,18 @@ ul p:hover {
 
 .whatsapp a {
   position: fixed;
-  width: 70px;
-  height: 70px;
-  bottom: 60px;
-  right: 60px;
+  width: 10vh;
+  height: 10vh;
+  bottom: 4vh;
+  right: 4vh;
   background-color: #25d366;
   color: #fff;
   border-radius: 50px;
   text-align: center;
-  font-size: 40px;
+  font-size: 6.3vh;
   box-shadow: var(--box-shadow);
   z-index: 1000;
-  transition: var(--transition);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: transform 0.6s ease;
 }
 
 .whatsapp a:hover {
