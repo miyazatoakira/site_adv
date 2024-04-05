@@ -15,6 +15,8 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
+  <script defer src="./assets/js/script.js"></script>
+
   <link rel="icon" href="./assets/images/logo_nobg.png" />
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -23,6 +25,14 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true" class="position-relative">
+
+  <div class="spinner-wrapper">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+
   <!-- NAVBAR -->
   <nav id="navbar" class="navbar navbar-expand-lg sticky-lg-top text-center" data-bs-theme="dark">
     <div class="container-fluid">
@@ -114,8 +124,8 @@
         </div>
 
         <div class="col-lg-6">
-          <img src="./assets/images/quemsomos.jpg" class="ms-5" data-aos="fade-down" data-aos-delay="50" alt=""
-            style="width: 80%" />
+          <img src="./assets/images/quemsomos.jpg" class="img-thumbnail ms-5" data-aos="fade-down" data-aos-delay="50"
+            alt="" style="width: 80%" />
         </div>
 
         <div class="col-lg-5" data-aos="fade-down" data-aos-delay="150">
@@ -174,7 +184,7 @@
           <div class="service theme-shadow p-lg-5 p-4 h-100 d-flex flex-column" data-aos="fade-down"
             data-aos-delay="150">
             <div class="iconbox">
-              <i class="bi bi-check-square" style="font-size: 45px"></i>
+              <i class="bi bi-building-fill" style="font-size: 45px"></i>
             </div>
             <h5 class="mt-4 mb-3">DIREITO CÍVEL</h5>
             <ul class=" ">
@@ -190,7 +200,7 @@
           <div class="service theme-shadow p-lg-5 p-4 h-100 d-flex flex-column" data-aos="fade-down"
             data-aos-delay="250">
             <div class="iconbox">
-              <i class="bi bi-check-square" style="font-size: 45px"></i>
+              <i class="bi bi-briefcase-fill" style="font-size: 45px;"></i>
             </div>
             <h5 class="mt-4 mb-3">DIREITO TRABALHISTA</h5>
             <ul class=" ">
@@ -208,7 +218,7 @@
           <div class="service theme-shadow p-lg-5 p-4 h-100 d-flex flex-column" data-aos="fade-down"
             data-aos-delay="350">
             <div class="iconbox">
-              <i class="bi bi-check-square" style="font-size: 45px"></i>
+              <i class="bi bi-safe-fill" style="font-size: 45px;"></i>
             </div>
             <h5 class="mt-4 mb-3">DIREITO PREVIDENCIÁRIO</h5>
             <ul class=" ">
@@ -224,7 +234,8 @@
           <div class="service theme-shadow p-lg-5 p-4 h-100 d-flex flex-column" data-aos="fade-down"
             data-aos-delay="450">
             <div class="iconbox">
-              <i class="bi bi-check-square" style="font-size: 45px"></i>
+              <i class="bi bi-person-standing" style="font-size: 45px"></i>
+              <i class="bi bi-person-standing-dress" style="font-size: 45px"></i>
             </div>
             <h5 class="mt-4 mb-3">DIREITO DE FAMÍLIA</h5>
             <ul class=" ">
@@ -250,8 +261,8 @@
             <h1 class="display-4 fw-semibold">Fale Conosco</h1>
             <div class="line"></div>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
-              ea praesentium consectetur eveniet, ipsam sit eos
+              Utilize o formulário abaixo para nos enviar suas consultas. Nossa equipe está à disposição para fornecer
+              orientação jurídica de qualidade e teremos o prazer de ajudá-lo.
             </p>
           </div>
         </div>
@@ -316,7 +327,9 @@
       <div class="container">
         <div class="row gy-5">
           <div class="col-lg-3 col-sm-6 text-center" data-aos="fade-down" data-aos-delay="150" id="img">
-            <img src="./assets/images/logo_nobg.png" class="img w-75 mb-3" alt="" />
+            <a href="#inicio" style="width: 10%;">
+              <img src="./assets/images/logo_nobg.png" class="mb-3 w-100" alt="" />
+            </a>
             <h5 class="mb-2" id="nome">Dra. Ivone Pereira de Sousa</h5>
             <p class="mb-0" id="nome">Advocacia e Assistência Jurídica</p>
           </div>
@@ -375,10 +388,8 @@
 
           <div id="footer" class="col-lg-3 col-md-6 col-sm-6" data-aos="fade-down" data-aos-delay="450">
             <a href=""></a>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-              perspiciatis repellat tempore! Animi, a. Non tempore dolorum
-              blanditiis deserunt
+            <p style="text-align: justify;">
+              Conecte-se conosco para obter assistência jurídica de excelência e ficar por dentro de nossos serviços.
             </p>
             <div class="social-icons">
               <a href="https://wa.me/11950728490" class="me-3"><i class="bi bi-whatsapp"></i></a>
