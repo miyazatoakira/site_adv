@@ -395,26 +395,40 @@ ul p:hover {
   color: var(--10_color);
 }
 
+
 /* Botão Flutuante Whatsapp */
 
-.whatsapp a {
+/* Botão Flutuante Whatsapp */
+
+.whatsapp-btn {
   position: fixed;
-  width: 10vh;
-  height: 10vh;
   bottom: 4vh;
-  right: 4vh;
-  background-color: #25d366;
-  color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 6.3vh;
-  box-shadow: var(--box-shadow);
-  z-index: 1000;
-  transition: transform 0.6s ease;
+  right: 10vh;
+  background-color: #25d366; /* Cor padrão do WhatsApp */
+  color: #fff; /* Cor do ícone */
+  width: 60px; /* Largura do botão */
+  height: 60px; /* Altura do botão */
+  border-radius: 50%; /* Transforma o botão em um círculo */
+  box-shadow: var(--box-shadow); /* Sombra */
+  z-index: 1000; /* Para garantir que esteja acima de outros elementos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Remove o sublinhado do link */
+  transition: transform 0.3s ease; /* Transição suave ao escalar */
 }
 
-.whatsapp a:hover {
-  background-color: #128c7e;
-  box-shadow: var(--box-shadow);
-  transform: scale(1.1);
+.whatsapp-btn:hover {
+  background-color: #128c7e; /* Cor de destaque ao passar o mouse */
+  transform: scale(1.1); /* Efeito de escala ao passar o mouse */
 }
+
+/* Ajuste o tamanho do ícone do WhatsApp */
+.whatsapp-btn i {
+  font-size: 28.8px; /* Tamanho do ícone */
+  display: flex; /* Adiciona flexbox ao ícone */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+
