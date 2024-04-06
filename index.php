@@ -1,5 +1,4 @@
 <?php
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Captura os dados do formulário
     $mailTo = "augusto210907@duck.com";
@@ -9,18 +8,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $assunto = $_POST['assunto'];
     $mensagem = $_POST['mensagem'];
 
-    $mensagem_nome = "$nome"." $sobrenome\n"."$mensagem";
+    $mensagem_nome = "$nome $sobrenome\n$mensagem";
 
     $headers = "From: $email";
     
-    if(mail($mailTo, $assunto, $mensagem_nome, $headers)){
-      echo '<script>alert("Sua mensagem foi enviada com sucesso !")</script>';
+    if (mail($mailTo, $assunto, $mensagem_nome, $headers)){
+      echo '<script>
+      alert("Mensagem enviada !")
+      </script>';
     }
+
     else{
-      echo '<script>alert("Ocorreu um erro no envio da sua mensagem !")</script>';
+        echo '<script>
+        alert("Ocorreu um erro no envio da mensagem !")
+        </script>';
     }
 }
 ?>
+
 
 
 <!DOCTYPE html>
@@ -93,12 +98,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </li>
         </ul>
 
-        <div class="social-icon mt-lg-0 mt-xl-0 mt-xxl-0 mt-md-2 mt-4 me-xxl-5 me-xl-5 me-lg-5 me-0">
-          <a class="me-xxl-3 me-xl-3 me-0" href="https://wa.me/11950728490" target="_blank">
+        <div class="social-icon mt-lg-0 mt-xl-0 mt-xxl-0 mt-md-2 mt-4 mx-xxl-5 mx-xl-5 mx-lg-5 mx-0">
+          <a class="me-0" href="https://wa.me/11950728490" target="_blank">
             <i class="bi bi-whatsapp"></i></a>
-          <a class="me-xxl-3 me-xl-3 me-0" href=""><i class="bi bi-instagram"></i></a>
-          <a class="me-xxl-3 me-xl-3 me-0" href=""><i class="bi bi-facebook"></i></a>
-          <a class="me-xxl-3 me-xl-3 me-0"
+          <a class="me-0" href=""><i class="bi bi-instagram"></i></a>
+          <a class="me-0" href=""><i class="bi bi-facebook"></i></a>
+          <a class="me-0"
             href="mailto:ivone.shiniti@adv.oabsp.org.br?subject=Contato%20Dra.%20Ivone%20Pereira%20de%20Sousa&body=Ol%C3%A1%2C%0A%0AGostaria%20de%20entrar%20em%20contato%20para%20mais%20informa%C3%A7%C3%B5es.%0A%0AAtenciosamente%2C%0ANome%20Completo"
             target="_blank"><i class="bi bi-envelope-fill"></i></a>
         </div>
@@ -451,12 +456,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <script>
     AOS.init();
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
-
 </html>
