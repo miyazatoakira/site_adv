@@ -1,3 +1,28 @@
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Captura os dados do formulário
+    $mailTo = "augusto210907@duck.com";
+    $nome = $_POST['nome'];
+    $sobrenome = $_POST['sobrenome'];
+    $email = $_POST['email'];
+    $assunto = $_POST['assunto'];
+    $mensagem = $_POST['mensagem'];
+
+    $mensagem_nome = "$nome"." $sobrenome\n"."$mensagem";
+
+    $headers = "From: $email";
+    
+    if(mail($mailTo, $assunto, $mensagem_nome, $headers)){
+      echo '<script>alert("Sua mensagem foi enviada com sucesso !")</script>';
+    }
+    else{
+      echo '<script>alert("Ocorreu um erro no envio da sua mensagem !")</script>';
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -270,7 +295,7 @@
 
       <div class="row justify-content-center" data-bs-theme="dark" data-aos="fade-down" data-aos-delay="150">
         <div class="col-lg-8">
-          <form method="post" action="./email.php" class="row g-3 p-lg-5">
+          <form method="POST" class="row g-3 p-lg-5">
             <div class="col-lg-6 form-floating">
               <input type="text" name="nome" class="form-control" id="floatingInput" placeholder="Insira Primeiro Nome"
                 required />
