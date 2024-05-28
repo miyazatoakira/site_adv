@@ -43,13 +43,11 @@ h5,
 .h4,
 .h5 {
   font-family: gotham;
-  font-weight: 500;
 }
 
 .p,
 p {
   font-family: gotham;
-  font-weight: 500;
   color: silver;
 }
 
@@ -112,14 +110,8 @@ body {
 }
 
 .navbar .nav-item:hover{
-  font-family: gotham-bold;
-  color: var(--10_color);
+  font-family: gotham-medium;
   transition: var(--transition);
-}
-
-.nav-link:active{
-  font-family: gotham-bold;
-  color: var(--10_color);
 }
 
 .nav-item:hover {
@@ -132,7 +124,7 @@ body {
 }
 
 .navbar .bi {
-  color: #585858;
+  color: var(--60_color);
 }
 
 .navbar .social-icon {
@@ -148,7 +140,7 @@ body {
   align-items: center;
   justify-content: center;
   display: flex;
-  border-radius: 100px;
+  border-radius: 12px;
   padding: 0;
   position: relative;
 }
@@ -161,11 +153,11 @@ body {
   transition: transform 0.5s ease;
   border: 2px solid var(--10_color);
   transform: scale(1.2);
-  i{
-    color: var(--10_color);
-  }
+  color: var(--10_color);
 }
-
+.navbar .social-icon a:hover .bi{
+  color: var(--10_color);
+}
 
 /* HERO SECTION */
 .hero {
@@ -330,6 +322,11 @@ section {
 
 #contato:placeholder-shown {
   color: var(--60_color);
+}
+
+#contato h1{
+  font-family: gotham-bold;
+  color: var(--10_color);
 }
 
 
